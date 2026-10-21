@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hillbillies1122-create.github.io/campus-pulse/sitemap.xml

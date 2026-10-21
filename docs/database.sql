@@ -1,0 +1,6 @@
+-- Campus Pulse database (Supabase / PostgreSQL). Reference copy of what is applied to the live project.
+-- Tables: profiles, marks, assessments, saved_careers, roadmap_items. Every table has row-level security:
+-- a signed-in user can only read and change their own rows.
+-- Functions: handle_new_user (creates a profile on sign-up), touch_updated_at, cohort_stats (anonymous averages,
+-- groups under 5 people hidden). Account deletion is done by the "delete-account" Edge Function.
+-- See the live project for the exact definitions.

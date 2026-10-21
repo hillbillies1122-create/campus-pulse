@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Campus Pulse | Career explorer for VIT engineering students</title>
+<meta name="description" content="Campus Pulse is a free career explorer for VIT engineering students. Take the O*NET interest profiler, rate your skills, and compare 32 engineering careers using real O*NET and India Skills Report data.">
+<link rel="canonical" href="https://hillbillies1122-create.github.io/campus-pulse/">
+<meta name="theme-color" content="#0b7a55">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Campus Pulse | Career explorer for VIT engineering students">
+<meta property="og:description" content="Find which engineering careers fit your interests and skills, using real O*NET data. Free, private, works on any device.">
+<meta property="og:url" content="https://hillbillies1122-create.github.io/campus-pulse/">
+<meta property="og:image" content="https://hillbillies1122-create.github.io/campus-pulse/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- GOOGLE_SITE_VERIFICATION -->
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css?v=1">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("cp-theme"), b = localStorage.getItem("cp-bg"), c = localStorage.getItem("cp-bg-custom");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      if (c) document.documentElement.style.setProperty("--bg-custom", c);
+      document.documentElement.setAttribute("data-bg-pre", b || "silk");
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Campus Pulse","url":"https://hillbillies1122-create.github.io/campus-pulse/","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"description":"Career explorer for engineering students using the O*NET interest profiler and O*NET occupational data."}
+</script>
+</head>
+<body data-bg="silk">
+<script>document.body.setAttribute("data-bg", document.documentElement.getAttribute("data-bg-pre") || "silk");</script>
+<a class="sr-only" href="#main">Skip to content</a>
+
+<!-- ============ Public landing page ============ -->
+<div id="landing">
+  <header class="site-header">
+    <a class="brand" href="#/" data-brand>Campus Pulse</a>
+    <nav>
+      <button class="icon-btn" id="landing-theme" data-action="theme-toggle" aria-label="Switch colour mode"></button>
+      <a class="btn btn-ghost" href="#/login">Sign in</a>
+      <a class="btn btn-primary" href="#/signup">Get started</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div>
+        <h1>Find the engineering career that fits you.</h1>
+        <p class="lede">Answer 60 quick questions about what you enjoy, rate your skills, and see how 32 real careers line up with you, from VLSI and robotics to civil, chemical and data science.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#/signup">Create a free account</a>
+          <a class="btn btn-ghost" href="sources.html">Where the data comes from</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Example result">
+        <div class="cap"><strong>An example pulse</strong><span>Interest code IRC</span></div>
+        <div id="hero-pulse"></div>
+      </div>
+    </section>
+
+    <section class="landing-section">
+      <h2>How it works</h2>
+      <div class="how">
+        <div><div class="step-n">1</div><h3>Say what you enjoy</h3><p>The O*NET Interest Profiler, used by career counsellors worldwide, turns 60 likes and dislikes into six interest scores.</p></div>
+        <div><div class="step-n">2</div><h3>Rate where you are</h3><p>Score yourself on the 12 skills and 10 knowledge areas O*NET uses to describe engineering work.</p></div>
+        <div><div class="step-n">3</div><h3>Compare and plan</h3><p>See your match with each career, the gaps worth closing, and a starter roadmap you can tick off.</p></div>
+      </div>
+    </section>
+
+    <section class="landing-section">
+      <h2>Built on real data, not guesses</h2>
+      <p class="sub">Every career's interest profile, skill demands and knowledge demands come from O*NET, the U.S. Department of Labor's occupational database. Branch employability comes from the India Skills Report 2026.</p>
+      <div class="facts">
+        <div class="fact"><b>32</b><span>engineering and tech careers, each with O*NET interest, skill and knowledge scores</span></div>
+        <div class="fact"><b>60</b><span>questions from the O*NET Interest Profiler Short Form</span></div>
+        <div class="fact"><b>75%</b><span>of ECE graduates tested were rated employable in the India Skills Report 2026 (CS 80%, Mechanical 63%)</span></div>
+      </div>
+      <div class="branch-strip" aria-label="Branches covered">
+        <span class="chip">CSE</span><span class="chip">IT</span><span class="chip">ECE</span><span class="chip">EEE</span><span class="chip">EIE</span><span class="chip">Mechanical</span><span class="chip">Civil</span><span class="chip">Chemical</span><span class="chip">Biotech</span>
+      </div>
+    </section>
+
+    <section class="landing-section">
+      <h2>Your account, any device</h2>
+      <p class="sub">Sign in with your email and password on your phone, laptop or a lab PC. Your profile, answers and roadmap are stored securely and only you can see them. You can download or delete everything at any time.</p>
+      <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a class="btn btn-primary" href="#/signup">Get started, it's free</a><a class="btn btn-ghost" href="privacy.html">Read the privacy notice</a></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <span>Campus Pulse · a student project at VIT Vellore</span>
+    <span><a href="sources.html">Data sources &amp; method</a> · <a href="privacy.html">Privacy</a></span>
+    <span>O*NET® is a trademark of the U.S. Department of Labor, Employment and Training Administration.</span>
+  </footer>
+</div>
+
+<!-- ============ Sign in / sign up ============ -->
+<div id="auth" hidden>
+  <header class="site-header">
+    <a class="brand" href="#/" data-brand>Campus Pulse</a>
+  </header>
+  <main class="auth-wrap" id="auth-view"></main>
+</div>
+
+<!-- ============ Signed-in app ============ -->
+<div id="app" hidden>
+  <div class="shell">
+    <aside class="rail">
+      <a class="brand" href="#/dashboard" data-brand>Campus Pulse</a>
+      <nav class="nav" id="nav" aria-label="Main"></nav>
+      <p class="rail-foot">Guidance, not a verdict. Your interests can change, so revisit your answers each semester.</p>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <span class="page-title" id="page-title"></span>
+        <div class="tools">
+          <div class="pop-wrap">
+            <button class="icon-btn" data-action="bg-pop" aria-label="Change background">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 0 0 5-5c0-4.1-4-7.4-9-7.4z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></svg>
+            </button>
+            <div class="popover" id="bg-pop" hidden></div>
+          </div>
+          <button class="icon-btn" id="theme-btn" data-action="theme-toggle" aria-label="Switch colour mode"></button>
+          <a class="avatar" id="avatar" href="#/settings" aria-label="Settings"></a>
+        </div>
+      </header>
+      <main class="content" id="view"></main>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="Main"></nav>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="assets/data.js?v=1"></script>
+<script src="assets/items.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

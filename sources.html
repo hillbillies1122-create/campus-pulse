@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data sources and method | Campus Pulse</title>
+<meta name="description" content="How Campus Pulse calculates career matches: O*NET interest, skill and knowledge data, the O*NET Interest Profiler, and India Skills Report 2026 figures.">
+<link rel="canonical" href="https://hillbillies1122-create.github.io/campus-pulse/sources.html">
+<meta name="theme-color" content="#0b7a55">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css?v=1">
+<script>try{var t=localStorage.getItem("cp-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);var c=localStorage.getItem("cp-bg-custom");if(c)document.documentElement.style.setProperty("--bg-custom",c);}catch(e){}</script>
+</head>
+<body data-bg="silk">
+<script>try{document.body.setAttribute("data-bg",localStorage.getItem("cp-bg")||"silk")}catch(e){}</script>
+<header class="site-header">
+  <a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#0b7a55"/><path d="M4 19h6l2.5-7 4 13 3.5-10 2 4H30" fill="none" stroke="#e7c26a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Campus Pulse</a>
+  <nav><a class="btn btn-ghost" href="./#/login">Sign in</a><a class="btn btn-primary" href="./#/signup">Get started</a></nav>
+</header>
+<main class="landing-section prose">
+<h1 style="font-size:clamp(32px,4vw,48px)">Data sources and method</h1>
+<p>Campus Pulse uses published, citable data. This page lists every source and explains exactly how each number on the site is calculated, so you can check it or reuse it in a report.</p>
+
+<h2>1. Career data: O*NET</h2>
+<p>All 32 careers come from <a href="https://www.onetonline.org/" target="_blank" rel="noopener">O*NET OnLine</a>, the occupational database of the U.S. Department of Labor, Employment and Training Administration. For each career we use its O*NET-SOC code and these O*NET fields:</p>
+<ul>
+<li><b>Interests</b>: the six Occupational Interest scores (Realistic, Investigative, Artistic, Social, Enterprising, Conventional), 0–100.</li>
+<li><b>Skills</b>: importance (0–100) of 12 skills: Programming, Mathematics, Science, Critical Thinking, Complex Problem Solving, Technology Design, Troubleshooting, Systems Analysis, Quality Control Analysis, Writing, Speaking, Coordination.</li>
+<li><b>Knowledge</b>: importance (0–100) of 10 areas: Engineering and Technology, Computers and Electronics, Physics, Design, Mechanical, Chemistry, Biology, Building and Construction, Telecommunications, Production and Processing.</li>
+<li>Description, sample job titles, key tasks (paraphrased), job zone and example tools.</li>
+</ul>
+<p>Data retrieved from O*NET OnLine on 21 October 2026. Each career page links to its O*NET source page. O*NET content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Several Campus Pulse career names add Indian context, for example "Computer Hardware / Embedded Engineer" is O*NET 17-2061.00 Computer Hardware Engineers; O*NET has no separate "embedded" or "VLSI" occupation.</p>
+<p><b>Limitation:</b> O*NET describes jobs in the United States. What the work involves transfers well to India, but pay, demand and hiring practices do not, so Campus Pulse does not show U.S. salary or outlook figures.</p>
+
+<h2 id="interest-profiler">2. Interest questions: O*NET Interest Profiler</h2>
+<p>The 60 activities come from the <a href="https://www.onetcenter.org/IP.html" target="_blank" rel="noopener">O*NET Interest Profiler Short Form</a> (U.S. Department of Labor, Employment and Training Administration), used under the <a href="https://www.onetcenter.org/license_tools.html" target="_blank" rel="noopener">O*NET Tools Developer License</a>. Campus Pulse modified it as follows: items are interleaved across the six areas, each item is answered Like / Not sure / Dislike, and results are shown on screen.</p>
+<p><b>Scoring.</b> Each area has 10 items. Like = 1 point, Not sure = 0.5, Dislike = 0. Area score = points ÷ 10 × 100. Your interest code is the three highest areas, in order.</p>
+
+<h2>3. Matching method</h2>
+<h3>Interest fit (0–100)</h3>
+<p>The Pearson correlation <i>r</i> between your six interest scores and the career's six O*NET interest scores, multiplied by 100. A negative correlation (opposite shape) counts as 0. It measures whether the <i>shape</i> of your profile matches the career's (which areas are high and low), not the absolute level.</p>
+<h3>Skill readiness (0–100)</h3>
+<p>O*NET rates importance on a 1–5 scale and publishes it as 0–100 using (<i>I</i> − 1) ÷ 4 × 100. Campus Pulse converts it back: expected level = 1 + importance ÷ 25. Only skills and knowledge areas with importance of 50 or more (rated "important" or higher) are used. For each one, we take min(your rating ÷ expected level, 1), then average these and multiply by 100.</p>
+<h3>Overall match</h3>
+<p>Match = 0.6 × interest fit + 0.4 × readiness. Interests get more weight because skills can be learned, while interests tend to be more stable. If you have only done one part, the match uses that part alone. These weights are a design choice by Campus Pulse, not an O*NET rule.</p>
+<p>Marks and CGPA are <b>not</b> used in matching. They are shown back to you for reflection only.</p>
+
+<h2>4. India context: India Skills Report 2026</h2>
+<p>Employability rates by branch come from the <b>India Skills Report 2026</b>, released by ETS with CII, AICTE, AIU and Taggd, based on more than 100,000 candidates who took the Global Employability Test. Figures used: Computer Science 80%, Information Technology 78%, Instrumentation 77%, Electronics and Communication 75%, Mechanical 63%, all B.E./B.Tech 70.15%, national 56.35%. Branches without a published figure are not shown.</p>
+<p>Reported by <a href="https://thecsrjournal.in/india-skills-report-2026-uttar-pradesh-leads-youth-employability-maharashtra-ranks-second" target="_blank" rel="noopener">The CSR Journal</a> and <a href="https://news.careers360.com/india-skills-report-2026-cs-computer-science-it-engineer-top-jobs-mba-employment-decline-ai-ml-bfsi-fmcg-pharma-women-hiring" target="_blank" rel="noopener">Careers360</a>, November 2025. Note that "employability" here is a test-based readiness score, not a job-placement or unemployment rate.</p>
+
+<h2>5. Campus Pulse's own statistics</h2>
+<p>The Insights page shows averages across everyone using Campus Pulse: average interest scores, averages by branch, and average skill ratings. These are calculated live in the database. A group is only shown once it has at least 5 people, so nobody can be identified. No individual's answers are ever shown to anyone else.</p>
+
+<h2>6. Roadmap steps</h2>
+<p>The four starter steps on each career are suggestions written by Campus Pulse. They are not from O*NET. Edit or replace them freely.</p>
+
+<h2>How to cite</h2>
+<p><code>National Center for O*NET Development. O*NET OnLine. U.S. Department of Labor, Employment and Training Administration. Retrieved 21 October 2026, from https://www.onetonline.org/</code></p>
+<p><code>ETS, CII, AICTE, AIU and Taggd (2025). India Skills Report 2026.</code></p>
+<p><code>U.S. Department of Labor, Employment and Training Administration. O*NET Interest Profiler Short Form. https://www.onetcenter.org/IP.html</code></p>
+<p class="small muted">O*NET® is a trademark of the U.S. Department of Labor, Employment and Training Administration. This site was modified from the O*NET Interest Profiler and is not endorsed by the U.S. Department of Labor.</p>
+</main>
+<footer class="site-footer">
+  <span>Campus Pulse · a student project at VIT Vellore</span>
+  <span><a href="./">Home</a> · <a href="sources.html">Data sources &amp; method</a> · <a href="privacy.html">Privacy</a></span>
+</footer>
+</body>
+</html>
